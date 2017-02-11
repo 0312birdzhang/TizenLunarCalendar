@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://birdzhang.xyz/LunarCalendar" version="1.0.0" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="WvqFrDD3uG.LunarCalendar" package="WvqFrDD3uG" required_version="2.4"/>
+    <author href="http://www.birdzhang.xyz" email="0312birdzhang@gmail.com">BirdZhang</author>
+    <content src="index.html"/>
+    <description>LunarCalendar</description>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="tizen-lunar.png"/>
+    <name>LunarCalendar</name>
+    <name xml:lang="en-gb">LunarCalendar</name>
+    <name xml:lang="zh-cn">中华万年历</name>
+    <name xml:lang="zh-hk">农历</name>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:profile name="mobile"/>
+</widget>

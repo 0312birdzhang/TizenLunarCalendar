@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./lib/tau/mobile/theme/default/tau.css">
+	<link rel="stylesheet" href="./css/app.css">
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<title>小推万年历</title>
+</head>
+
+<body>
+<div class="ui-page">
+  <div class="toolbar ui-header" id="toolbar" data-position="fixed">
+		<h1 class="ui-title-text-main">中华万年历</h1>
+		<div class="ui-title-text-sub" id="today_num"></div>
+	    <div class="action hide"><a href="#" class="today"></a></div> 
+	</div>
+<div class="ui-content" id="wrapper">
+	<div class="date_row date_week">
+        <div class="date_item">周日</div>
+        <div class="date_item">周一</div>
+        <div class="date_item">周二</div>
+        <div class="date_item">周三</div>
+        <div class="date_item">周四</div>
+        <div class="date_item">周五</div>
+        <div class="date_item">周六</div>
+    </div>
+    
+    <div class="slide_wrap">
+    	<div class="date_slide"> 
+            <div class="date_list" id="date_list_0">
+            </div><!--date_list-->
+            
+            <div class="date_list" id="date_list_1">
+            </div><!--date_list-->
+        </div>
+    </div>
+    
+    <div class="date_info">
+        <div class="date_lunar_info"></div>
+        <div class="date_fetv"></div>
+        <div class="date_gan_zhi"></div>
+        
+        <div class="date_hl" >
+            <div class="date_hl_item">
+                <div class="hl_y circle">宜</div>
+                <span class="hl_y_content"></span>
+            </div>
+            
+            <div class="date_hl_item">
+                <div class="hl_j circle">忌</div>
+                <span class="hl_j_content"></span>
+            </div>
+        </div>
+    </div><!--date_info-->
+</div>
+<div id="quit_popup" class="ui-popup">
+            <div class="ui-popup-header">确认退出？</div>
+            <div class="ui-popup-footer ui-grid-col-2">
+                <a class="ui-btn"  id="quit_cancle" data-rel="back" data-inline="true">取消</a>
+                <a class="ui-btn"  id="quit_confirm" data-rel="back" data-inline="true">确认</a>
+            </div>
+  </div>
+  </div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/hammer.min.js"></script>
+<script type="text/javascript" src="js/jquery.hammer.min.js"></script>
+<script type="text/javascript" src="js/LunarCalendar.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/array.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	document.getElementById('quit_cancle').addEventListener('click', function(ev){
+      tau.closePopup();
+   });
+   document.getElementById('quit_confirm').addEventListener('click', function(ev){
+     			try {
+					tizen.application.getCurrentApplication().exit();
+				} catch (ignore) {
+					console.log(ignore);
+				}
+   });
+	
+</script>
+</body>
+</html>
