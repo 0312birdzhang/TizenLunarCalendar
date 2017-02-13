@@ -12,21 +12,21 @@
 			day = day<10 ? '0'+day : day;
 			var current_day = year+'-'+month+'-'+day;
 			var selected_day = $("#today_num").html();
-			console.log("current_day:"+current_day);
-			console.log("selected_day:"+selected_day);
+			// console.log("current_day:"+current_day);
+			// console.log("selected_day:"+selected_day);
 			if (current_day == selected_day) {
 				//popup
 				tau.openPopup("#quit_popup");
-//				try {
-//					tizen.application.getCurrentApplication().exit();
-//				} catch (ignore) {
-//					console.log(ignore);
-//				}
 			} else {
-				console.log("need go back today");
+				// console.log("need go back today");
 				$('.today').trigger("tap");
 			}
 		}
+		if (ev.keyName === "menu") {
+			console.log("menu key clicked!")
+			tau.closePopup();
+		}	
 	});
+
 }());
 
